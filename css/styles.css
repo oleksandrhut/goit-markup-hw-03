@@ -65,10 +65,15 @@
       margin-right: auto;
    }
 
+   img {
+      display: block;
+   }
+
 /* ___________________________________________Header */
 
 .page-header{
    height: 80px;
+   border-bottom: 1px solid #ECECEC;;
 
 }
 .header-container{
@@ -292,18 +297,18 @@ body
    cursor:pointer;
 
    font-family: inherit;
-
    font-weight: 500;
    font-size: 16px;
    line-height: 1.63;
+    letter-spacing: 0.03em;
 
    background: var(--background-button);
    border-radius: 4px;
 
-   letter-spacing: 0.03em;
-
    color: #212121;
+   border-color: transparent;
 }
+
 
 .big-headers
 {
@@ -379,10 +384,49 @@ border-radius: 0px 0px 4px 4px;
    color: var(--background-titles-item);
    background-color: var(--background-focus-button);
 }
- .titles-item
+ 
+   
+
+ 
+
+ /* _______________________Portfolio */
+ .example-button{
+   background: #F5F4FA;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 4px;
+
+   padding: 6px 22px;
+   }
+
+.example-container{
+   display: flex;
+}
+
+ .example-menu{
+   display: flex;
+   padding-top: 94px;
+   text-align: center;
+  min-width: 611px;
+  min-height: 54px;
+  margin: auto;
+ 
+   gap: 8px;
+
+}
+.titles-menu{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+
+   padding-top: 50px;
+   padding-bottom: 94px;
+}
+
+.titles-item
  {
    background: var(--background-titles-item);
-   border: 1px solid #EEEEEE;
+   /* border: 1px solid #EEEEEE; */
+   flex-basis: calc((100% - 60px) /3 ) ;
  }
 
  .titles-item .titles
@@ -391,11 +435,14 @@ border-radius: 0px 0px 4px 4px;
    font-weight: 700;
    font-size: 18px;
    line-height: 2;
-   /* identical to box height, or 200% */
-   
    letter-spacing: 0.06em;
    
    color: var(--titles-color);
+
+   padding-top:20px ;
+   padding-left: 24px;
+
+  
  }
 
 
@@ -406,10 +453,15 @@ border-radius: 0px 0px 4px 4px;
    font-size: 16px;
    line-height: 1.88;
 
+   padding-top: 4px;
+   padding-bottom: 20px;
+   padding-left: 24px;
  }
 
-
-
+ .titles-border
+ {
+   border: 1px solid #EEEEEE;
+ }
 
  /* _____________________________________footer */
 
@@ -448,11 +500,18 @@ border-radius: 0px 0px 4px 4px;
    /* or 171% */
 
    letter-spacing: 0.03em;
+
+   margin-top: 20px;
  }
 
  .footer-list {
    margin-top: 20px;
  }
+.footer-list-item:not(:first-child)
+{
+   margin-top: 9px;
+}
+
  .contacts-footer
  {
    
@@ -462,10 +521,8 @@ border-radius: 0px 0px 4px 4px;
    letter-spacing: 0.03em;
 
    color: rgba(255, 255, 255, 0.6);
-
-   margin-top: 9px;
  }
-
+ 
  .contacts-footer:hover,
  .contacts-footer:focus,
  .map:hover,
