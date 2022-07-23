@@ -196,7 +196,8 @@ body
 .hero
 {
    background: var(--background-hero);
-   height: 600px;
+   padding-top: 200px;
+   padding-bottom: 200px;
 }
 
 .hero-title
@@ -214,7 +215,7 @@ body
    margin-left: auto;
    margin-right: auto;
    text-align: center;
-   padding-top: 200px;
+  
 
 }
 
@@ -233,7 +234,7 @@ body
    background: var(--background-focus-button);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    border-radius: 4px;
-   border-color: transparent;
+   border: none;
 
    cursor:pointer;
 
@@ -254,13 +255,14 @@ body
    background: var(--background-hero-focus);
 }
 
+.section
+{
+   padding: 94px 0;
+}
 .properties{
    display: flex;
-   padding-top: 94px;
-   padding-bottom: 94px;
-   row-gap: 30px;
-   column-gap: 30px;
-   flex-wrap: wrap;
+   
+   gap: 30px;
 }
 
 .properties-flex {
@@ -301,14 +303,16 @@ body
    font-weight: 500;
    font-size: 16px;
    line-height: 1.63;
-    letter-spacing: 0.03em;
+   letter-spacing: 0.03em;
 
    background: var(--background-button);
    border-radius: 4px;
 
    color: #212121;
    border-color: transparent;
+   border: none;
 }
+
 
 
 .big-headers
@@ -326,9 +330,9 @@ body
 
 .examples{
    display: flex;
-   row-gap: 30px;
-   column-gap: 30px;
-   padding-bottom: 94px;
+   gap: 30px;
+   
+   
 }
 .examples-flex{
    flex-basis: calc((100% - 60px) / 3);
@@ -345,9 +349,7 @@ body
 .teammates{
    display: flex;
    gap:30px;
-   flex-wrap: wrap;
 
-   padding-bottom: 94px;
 }
 
 .teammates-item
@@ -359,6 +361,9 @@ border-radius: 0px 0px 4px 4px;
    flex-basis: calc((100% - 90px) / 4)
 }
 
+.teammates-block{
+   padding: 30px 0;
+}
 .teammates-name
 {
    
@@ -377,6 +382,7 @@ border-radius: 0px 0px 4px 4px;
    font-size: 16px;
    line-height: 1.19;
    text-align: center;
+   margin-top: 10px;
 }
 
 .button:hover ,
@@ -392,7 +398,7 @@ border-radius: 0px 0px 4px 4px;
 
  /* _______________________Portfolio */
  .example-button{
-   background: #F5F4FA;
+   background: var(--background-button);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 4px;
 
@@ -400,18 +406,12 @@ border-radius: 0px 0px 4px 4px;
    }
 
 .example-container{
-   display: flex;
+  
 }
 
  .example-menu{
    display: flex;
-   padding-top: 94px;
-   text-align: center;
-  min-width: 611px;
-  min-height: 54px;
-  margin-left: auto;
-  margin-right: auto;
- 
+   justify-content: center;
    gap: 8px;
 
 }
@@ -420,8 +420,7 @@ border-radius: 0px 0px 4px 4px;
    flex-wrap: wrap;
    gap: 30px;
 
-   padding-top: 50px;
-   padding-bottom: 94px;
+   margin-top: 50px;
 }
 
 .titles-item
@@ -441,8 +440,6 @@ border-radius: 0px 0px 4px 4px;
    
    color: var(--titles-color);
 
-   padding-top:20px ;
-   padding-left: 24px;
 
   
  }
@@ -456,13 +453,14 @@ border-radius: 0px 0px 4px 4px;
    line-height: 1.88;
 
    padding-top: 4px;
-   padding-bottom: 20px;
-   padding-left: 24px;
+   
  }
 
  .titles-border
  {
    border: 1px solid #EEEEEE;
+   border-top: none;
+   padding: 20px 24px;
  }
 
  /* _____________________________________footer */
@@ -470,11 +468,9 @@ border-radius: 0px 0px 4px 4px;
  footer
  {
    background: var(--background-footer);
-   height: 252px;
+   padding: 60px 0;
  }
-.footer-menu {
-   padding-top: 60px;
-}
+
  address
  {
    font-style: normal;
@@ -482,6 +478,7 @@ border-radius: 0px 0px 4px 4px;
 
  .logo-footer
  {
+   display: block;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -489,6 +486,8 @@ border-radius: 0px 0px 4px 4px;
     letter-spacing: 0.03em;
 
     color: var(--logo-footer);
+
+    margin-bottom: 20px;
  }
 
  .map
@@ -503,7 +502,6 @@ border-radius: 0px 0px 4px 4px;
 
    letter-spacing: 0.03em;
 
-   margin-top: 20px;
  }
 
  .footer-list {
